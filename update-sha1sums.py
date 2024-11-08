@@ -59,9 +59,9 @@ def update():
                 filePath = filePath[1:]
 
             with open(os.path.join(vendorPath, filePath), 'rb') as f:
-                hash = sha1(f.read()).hexdigest()
+                file_hash = sha1(f.read()).hexdigest()
 
-            lines[index] = '%s|%s' % (line, hash)
+            lines[index] = '%s|%s' % (line, file_hash)
 
 
 if len(sys.argv) == 2 and sys.argv[1] == '-c':
