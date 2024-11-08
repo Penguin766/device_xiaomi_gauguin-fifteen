@@ -20,8 +20,8 @@ import os
 import sys
 from hashlib import sha1
 
-device='gauguin'
-vendor='xiaomi'
+device = 'gauguin'
+vendor = 'xiaomi'
 
 with open('proprietary-files.txt', 'r') as f:
     lines = f.read().splitlines()
@@ -47,7 +47,7 @@ def update():
 
         # Check if we need to set SHA1 hash for the next files
         if line[0] == '#':
-            needSHA1 = (' - from' in line)
+            needSHA1 = ' - from' in line
             continue
 
         if needSHA1:
