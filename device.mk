@@ -390,6 +390,9 @@ PRODUCT_COPY_FILES += \
 # Updater
 AB_OTA_UPDATER := false
 
+PRODUCT_PACKAGES += \
+    Updater
+
 # USB
 $(call inherit-product, vendor/qcom/opensource/usb/vendor_product.mk)
 
